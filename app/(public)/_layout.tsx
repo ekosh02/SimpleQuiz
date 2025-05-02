@@ -4,6 +4,7 @@ const PublicLayout = () => {
   return (
     <Stack>
       <Stack.Screen name="index" options={{ headerShown: false }} />
+      <Stack.Screen name="quizPreview" options={{ headerShown: false }} />
     </Stack>
   )
 }
