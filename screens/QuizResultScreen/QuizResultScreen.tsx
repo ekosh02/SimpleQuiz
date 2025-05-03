@@ -1,4 +1,4 @@
-import { PrimaryButton } from '@/components'
+import { PrimaryButton, ScoreView } from '@/components'
 import { musicQuiz } from '@/data'
 import { useTheme } from '@/hooks'
 import { useLocalSearchParams, useRouter } from 'expo-router'
@@ -39,9 +39,7 @@ const QuizResultScreen = () => {
     <>
       <ScrollView style={[styles.container, dynamicStyles.container]}>
         <View style={styles.scoreContainer}>
-          <View style={styles.scoreCircle}>
-            <Text style={[styles.scoreText, dynamicStyles.scoreText]}>{`${scoreNumber}`}</Text>
-          </View>
+          <ScoreView score={scoreNumber} />
           <Text style={styles.resultText}>{'Ваш результат'}</Text>
           <Text style={styles.resultTitle}>{resultText}</Text>
         </View>

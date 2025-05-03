@@ -11,20 +11,6 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  scoreCircle: {
-    marginTop: 30,
-    width: width / 2,
-    height: width / 2,
-    borderRadius: width / 4,
-    borderWidth: 6,
-    borderColor: '#fff',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  scoreText: {
-    fontSize: 64,
-    fontWeight: '700',
-  },
   resultText: {
     marginTop: 20,
     fontSize: 30,
