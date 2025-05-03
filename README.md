@@ -52,6 +52,5 @@ npx expo start -c
 ### Пример работы приложения
 
 <video  width="350" controls>
-  <source src="./readmeAssets/Record1.MP4" type="video/mp4">
-  Ваш браузер не поддерживает тег video.
+  <source src="https://raw.githubusercontent.com/ekosh02/SimpleQuiz/main/readmeAssets/Record1.MP4" type="video/mp4">
 </video>
