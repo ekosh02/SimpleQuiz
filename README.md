@@ -52,5 +52,5 @@ npx expo start -c
 ### Пример работы приложения
 
 <video  width="350" controls>
-  <source src="https://raw.githubusercontent.com/ekosh02/SimpleQuiz/main/readmeAssets/Record1.MP4" type="video/mp4">
+  <source src="https://raw.githubusercontent.com/ekosh02/SimpleQuiz/main/readmeAssets/Record1.MP4" type="video/MP4">
 </video>
