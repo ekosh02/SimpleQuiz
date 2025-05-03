@@ -17,7 +17,7 @@ const QuizPreviewScreen = () => {
   const quiz = quizCatalog.data.find((item) => item.id === id)
   const dynamicStyle = getDynamicStyle({ colors, bottom, top })
 
-  const handleStart = () => router.navigate({ pathname: '/quizTest', params: { id: id } })
+  const handleStart = () => router.replace({ pathname: '/quizTest', params: { id: id } })
 
   return (
     <>
@@ -30,6 +30,7 @@ const QuizPreviewScreen = () => {
       </ScrollView>
       <View style={[styles.buttonContainer, dynamicStyle.buttonContainer]}>
         <PrimaryButton text="Начать" onPress={handleStart} />
+        <PrimaryButton text="Назад" onPress={router.back} buttonStyle={styles.secondButton} />
       </View>
     </>
   )

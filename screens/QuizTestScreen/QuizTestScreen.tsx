@@ -87,14 +87,24 @@ const QuizTestScreen = () => {
     const selectedOption = selectedAnswers[item.id]
     if (selectedOption !== undefined) return
 
-    setSelectedAnswers((prev) => ({ ...prev, [item.id]: index }))
-
-    setTimeout(() => {
-      if (currentIndex + 1 < (quizQuestionsDataLength ?? 0)) {
-        flatListRef.current?.scrollToIndex({ index: currentIndex + 1, animated: true })
-        setCurrentIndex((prev) => prev + 1)
-      }
-    }, 1000)
+    setSelectedAnswers((prev) => {
+      const newSelectedAnswers = { ...prev, [item.id]: index }
+      setTimeout(() => {
+        if (currentIndex + 1 < (quizQuestionsDataLength ?? 0)) {
+          flatListRef.current?.scrollToIndex({ index: currentIndex + 1, animated: true })
+          setCurrentIndex((prev) => prev + 1)
+        } else {
+          router.replace({
+            pathname: '/quizResult',
+            params: {
+              selectedAnswers: JSON.stringify(newSelectedAnswers),
+              quizQuestionsDataLength,
+            },
+          })
+        }
+      }, 1000)
+      return newSelectedAnswers
+    })
   }
 
   const renderItem = ({ item }: { item: QuizQuestion }) => {

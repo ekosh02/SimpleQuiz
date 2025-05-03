@@ -28,6 +28,7 @@ export const styles = StyleSheet.create({
     textAlign: 'center',
   },
   buttonContainer: {
+    gap: 10,
     position: 'absolute',
     width: '100%',
     bottom: 0,
@@ -42,6 +43,9 @@ export const styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
     elevation: 5,
+  },
+  secondButton: {
+    backgroundColor: '#ccc',
   },
 })
 
@@ -58,7 +62,7 @@ export const getDynamicStyle = ({ colors, bottom, top }: DynamicStyleProps) =>
       color: colors.font.gray,
     },
     buttonContainer: {
-      paddingBottom: bottom + 16,
+      paddingBottom: bottom + 6,
       backgroundColor: colors.background.primary,
     },
   })

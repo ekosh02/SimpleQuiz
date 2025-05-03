@@ -39,7 +39,7 @@ export const styles = StyleSheet.create({
 })
 
 export const getDynamicStyle = ({ subtext, isLoading }: DynamicStyleProps) => {
-  const buttonViewPaddingVertical = Boolean(subtext) ? 10 : 18
+  const buttonViewPaddingVertical = Boolean(subtext) ? 10 : 14
   const textsColumnOpacity = isLoading ? 0 : 1
 
   return StyleSheet.create({
