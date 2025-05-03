@@ -2,7 +2,7 @@ import { PrimaryButton } from '@/components'
 import { quizCatalog } from '@/data'
 import { useTheme } from '@/hooks'
 import { Image } from 'expo-image'
-import { useLocalSearchParams } from 'expo-router'
+import { useLocalSearchParams, useRouter } from 'expo-router'
 import { Text, View } from 'react-native'
 import { ScrollView } from 'react-native-gesture-handler'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
@@ -10,13 +10,14 @@ import { getDynamicStyle, styles } from './styles'
 
 const QuizPreviewScreen = () => {
   const { id } = useLocalSearchParams()
+  const router = useRouter()
   const { colors } = useTheme()
   const { bottom, top } = useSafeAreaInsets()
 
   const quiz = quizCatalog.data.find((item) => item.id === id)
   const dynamicStyle = getDynamicStyle({ colors, bottom, top })
 
-  const handleStart = () => {}
+  const handleStart = () => router.navigate({ pathname: '/quizTest', params: { id: id } })
 
   return (
     <>

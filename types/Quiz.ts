@@ -16,7 +16,7 @@ export type QuizQuestion = {
   questionText: string
   options: string[]
   correctIndex: number
-  timeLimit: number
+  audio: string | number
 }
 
 export type QuizDetail = {

@@ -48,6 +48,7 @@ export const styles = StyleSheet.create({
 export const getDynamicStyle = ({ colors, bottom, top }: DynamicStyleProps) =>
   StyleSheet.create({
     scrollView: {
+      backgroundColor: colors.background.primary,
       paddingTop: top + 20,
     },
     title: {
@@ -58,6 +59,6 @@ export const getDynamicStyle = ({ colors, bottom, top }: DynamicStyleProps) =>
     },
     buttonContainer: {
       paddingBottom: bottom + 16,
-      backgroundColor: colors.background.white,
+      backgroundColor: colors.background.primary,
     },
   })

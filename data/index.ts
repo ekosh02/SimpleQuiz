@@ -1,2 +1,2 @@
+export { musicQuiz } from './musicQuiz'
 export { quizCatalog } from './quizCatalog'
-export { speedMusicQuizData } from './speedMusicQuizData'
