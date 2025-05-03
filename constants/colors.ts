@@ -3,7 +3,13 @@ import { Theme } from '@/types'
 export const DefaultTheme: Theme = {
   dark: false,
   colors: {
+    status: {
+      correct: '#2cbd08',
+      mistake: '#bd3508',
+    },
     background: {
+      correct: '#5db03f',
+      mistake: '#ba5d3d',
       primary: '#e9eff8',
       white: '#fff',
     },

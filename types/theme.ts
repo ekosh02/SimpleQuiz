@@ -1,5 +1,11 @@
 export type Colors = {
+  status: {
+    correct: string
+    mistake: string
+  }
   background: {
+    correct: string
+    mistake: string
     primary: string
     white: string
   }

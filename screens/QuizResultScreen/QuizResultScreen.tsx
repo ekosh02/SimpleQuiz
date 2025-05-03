@@ -4,7 +4,7 @@ import { useTheme } from '@/hooks'
 import { useLocalSearchParams, useRouter } from 'expo-router'
 import { ScrollView, Text, View } from 'react-native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
-import { styles } from './styles'
+import { getDynamicStyles, styles } from './styles'
 
 const QuizResultScreen = () => {
   const router = useRouter()
@@ -25,7 +25,8 @@ const QuizResultScreen = () => {
   const scoreNumber = Math.floor(Number(score))
   const isPassed = scoreNumber > 50
   const resultText = isPassed ? 'Вы прошли тест' : 'Вы провалили тест'
-  const backgroundColor = isPassed ? '#5db03f' : '#ba5d3d'
+
+  const dynamicStyles = getDynamicStyles({ top, bottom, colors, isPassed })
 
   const handleTest = () => {
     router.replace({
@@ -36,17 +37,17 @@ const QuizResultScreen = () => {
 
   return (
     <>
-      <ScrollView style={[styles.container, { paddingTop: top + 10, backgroundColor }]}>
+      <ScrollView style={[styles.container, dynamicStyles.container]}>
         <View style={styles.scoreContainer}>
           <View style={styles.scoreCircle}>
-            <Text style={[styles.scoreText, { color: colors.font.white }]}>{`${scoreNumber}`}</Text>
+            <Text style={[styles.scoreText, dynamicStyles.scoreText]}>{`${scoreNumber}`}</Text>
           </View>
           <Text style={styles.resultText}>{'Ваш результат'}</Text>
           <Text style={styles.resultTitle}>{resultText}</Text>
         </View>
       </ScrollView>
 
-      <View style={[styles.buttonContainer, { bottom: bottom + 10 }]}>
+      <View style={[styles.buttonContainer, dynamicStyles.buttonContainer]}>
         <PrimaryButton
           text="Улучшать результат"
           viewStyle={styles.buttonView}

@@ -1,5 +1,6 @@
 import { width } from '@/utils'
 import { StyleSheet } from 'react-native'
+import { DynamicStylesProps } from './types'
 
 export const styles = StyleSheet.create({
   container: {
@@ -62,3 +63,15 @@ export const styles = StyleSheet.create({
     fontWeight: '500',
   },
 })
+
+export const getDynamicStyles = ({ bottom, top, colors, isPassed }: DynamicStylesProps) => {
+  const safePaddingTop = top + 10
+  const safePaddingBottom = bottom + 10
+  const containerBackgroundColor = isPassed ? '#5db03f' : '#ba5d3d'
+
+  return StyleSheet.create({
+    container: { paddingTop: safePaddingTop, backgroundColor: containerBackgroundColor },
+    buttonContainer: { bottom: safePaddingBottom },
+    scoreText: { color: colors.font.white },
+  })
+}
