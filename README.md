@@ -32,3 +32,26 @@ npx expo start -c
 - **Android**: нажмите `a` в терминале, чтобы открыть в Android-эмуляторе.
 - **iOS**: нажмите `i`, чтобы открыть в симуляторе iOS (только на macOS).
 - **В браузере**: нажмите `w`, чтобы открыть веб-версию приложения.
+
+## 🖼️ Скриншоты
+
+<div style="display: flex; overflow-x: scroll; gap: 10px;">
+  <img src="./readmeAssets/Screen1.png" width="300" alt="Screen1"/>
+  <img src="./readmeAssets/Screen2.png" width="300" alt="Screen2"/>
+</div>
+
+&nbsp;&nbsp;&nbsp;
+
+<div style="display: flex; overflow-x: scroll; gap: 10px;">
+  <img src="./readmeAssets/Screen3.png" width="300" alt="Screen3"/>
+  <img src="./readmeAssets/Screen4.png" width="300" alt="Screen4"/>
+</div>
+
+## 🎥 Видео
+
+### Пример работы приложения
+
+<video  width="350" controls>
+  <source src="./readmeAssets/Record1.MP4" type="video/mp4">
+  Ваш браузер не поддерживает тег video.
+</video>
